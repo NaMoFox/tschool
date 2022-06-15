@@ -3,17 +3,21 @@
 	 <section class="sidebar">
 
 		<ul class="sidebar-menu">
+		<li class="active">
 
-			<li class="active">
+<a href="inicio">
 
-				<a href="inicio">
+	<i class="fa fa-home"></i>
+	<span>Inicio</span>
 
-					<i class="fa fa-home"></i>
-					<span>Inicio</span>
+</a>
 
-				</a>
+</li>
+		<?php
 
-			</li>
+		if($_SESSION["perfil"] == "Administrador"){
+
+		echo '
 
 			<li>
 
@@ -24,9 +28,13 @@
 
 				</a>
 
-			</li>
+			</li>';
 
-			<li>
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Docente"){
+
+			echo '<li>
 
 				<a href="cursos">
 
@@ -50,6 +58,20 @@
 
 			<li>
 
+				<a href="crear-clases">
+				<i class="fa fa-pencil-square-o"></i>
+				<span>Crear Clases</span>
+
+				</a>
+
+			</li>';
+
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Estudiante"){
+
+			echo '<li>
+
 				<a href="estudiantes">
 
 					<i class="fa fa-users"></i>
@@ -57,9 +79,13 @@
 
 				</a>
 
-			</li>
+			</li>';
 
-			<li class="treeview">
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Estudiante"){
+
+		echo '<li class="treeview">
 
 				<a href="#">
 
@@ -86,20 +112,11 @@
 
 						</a>
 
-					</li>
+					</li>';
 
-					<li>
+					if($_SESSION["perfil"] == "Administrador"){
 
-						<a href="crear-clases">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Crear Clases</span>
-
-						</a>
-
-					</li>
-
-					<li>
+					echo '<li>
 
 						<a href="reportes">
 							
@@ -108,12 +125,15 @@
 
 						</a>
 
-					</li>
+					</li>';
 
-				</ul>
+				}
 
-			</li>
+				echo '</ul>
 
+			</li>';
+			}
+			?>
 		</ul>
 
 	 </section>
