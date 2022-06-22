@@ -12,6 +12,15 @@ class ControladorClases{
 		return $respuesta;
 	}	
 
+/*=============================================
+
+=============================================*/
+	static public function ctrCrearClase()	{}
+
+
+
+
+
 
 }
 
