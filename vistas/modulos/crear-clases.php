@@ -4,7 +4,7 @@
     
     <h1>
       
-      Administrar clases
+      Administrar Clases
     
     </h1>
 
@@ -24,9 +24,9 @@
 
       <div class="box-header with-border">
   
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalCrearClase">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarClase">
           
-          Agregar clase
+          Agregar Clase
 
         </button>
 
@@ -41,12 +41,11 @@
          <tr>
            
            <th style="width:10px">#</th>
-           <th>Nombre clase</th>
-           <th>Duracion-horas</th>
+           <th>Clase</th>
+           <th>Duracion</th>
            <th>Horario</th>
-           <th>Docente a cargo</th>
+           <th>Docente</th>
            <th>Estado</th>
-           <th>Acciones</th>
 
          </tr> 
 
@@ -61,20 +60,28 @@
 
         $clases = ControladorClases::ctrMostrarClases($item, $valor);
 
-        foreach ($clases as $key => $value){
-        
+       foreach ($clases as $key => $value){
+         
           echo '<tr>
-                  <td>'.$value["id"].'</td>
+                  <td>1</td>
                   <td>'.$value["nombre_clase"].'</td>
                   <td>'.$value["duracion"].'</td>
                   <td>'.$value["horario"].'</td>
-                  <td>'.$value["docente"].'</td>
-                  <td>'.$value["estado"].'</td>
+                  <td>'.$value["docente"].'</td>';
 
-                  
-                  
+                  if($value["estado"] != 0){
 
-                </tr>';
+                    echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
+
+                  }else{
+
+                    echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
+
+                  }             
+
+                
+
+                '</tr>';
         }
 
 
@@ -95,18 +102,26 @@
 <!--=====================================
 MODAL AGREGAR USUARIO
 ======================================-->
-<div id="modalCrearClase" class="modal fade" role="dialog"><!--modal-->
-  <div class="modal-dialog"><!--modal-dialog-->
-    <div class="modal-content"><!--modal-content-->
+
+<div id="modalAgregarClase" class="modal fade" role="dialog">
+  
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
       <form role="form" method="post" enctype="multipart/form-data">
+
         <!--=====================================
         CABEZA DEL MODAL
         ======================================-->
-        <div class="modal-header" style="background:#3c8dbc; color:white">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Agregar clase</h4>
-        </div>
 
+        <div class="modal-header" style="background:#3c8dbc; color:white">
+
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <h4 class="modal-title">Agregar Clase</h4>
+
+        </div>
 
         <!--=====================================
         CUERPO DEL MODAL
@@ -115,78 +130,107 @@ MODAL AGREGAR USUARIO
         <div class="modal-body">
 
           <div class="box-body">
-            <!-- ENTRADA PARA EL NOMBRE DE LA CLASE -->
+
+            <!-- ENTRADA PARA NUEVA CLASE -->
+            
             <div class="form-group">
+              
               <div class="input-group">
+              
                 <span class="input-group-addon"><i class="fa fa-user"></i></span> 
-                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Nombre de la clase" required>
+                <h5>Nombre de la clase</h5>
+                <input type="text" class="form-control input-lg" name="nuevaClase" placeholder="Nueva clase" required>
+
               </div>
+
             </div>
 
+            <!-- ENTRADA PARA DURACION -->
 
-            <!-- ENTRADA PARA DURACION DE CLASE -->
-            <div class="form-group">
+             <div class="form-group">
+              
               <div class="input-group">
+              
                 <span class="input-group-addon"><i class="fa fa-key"></i></span> 
-                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Duracion" id="nuevoUsuario" required>
+                <h5>Duracion de la clase</h5>
+                <input type="text" class="form-control input-lg" name="nuevaDuracion" placeholder="Ej:8 horas" id="nuevoUsuario" required>
+
               </div>
+
             </div>
 
+            <!-- ENTRADA PARA NUEVO HORARIO -->
 
-            <!-- ENTRADA PARA EL HORARIO -->
-            <div class="form-group">
+             <div class="form-group">
+              
               <div class="input-group">
+              
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
-                <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Horario" required>
+                <h5>Horario</h5>
+                <input type="text" class="form-control input-lg" name="nuevoHorario" placeholder="Ej: 8am a 10am" required>
+
               </div>
+
             </div>
 
+            <!-- ENTRADA PARA DOCENTE-->
 
-            <!-- ENTRADA PARA NOMBRE DOCENTE -->
             <div class="form-group">
+              
               <div class="input-group">
+              
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
-                <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Docente" required>
+                <h5>Nombre del docente</h5>
+                <input type="text" class="form-control input-lg" name="nuevoDocente" placeholder="Nombre completo" required>
+
               </div>
+
             </div>
 
+            <!-- ENTRADA PARA ESTADO-->
 
-      
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+                <h5>Estado</h5>
+                <input type="text" class="form-control input-lg" name="nuevoEstado" placeholder="Ej: 1 ó 0" required>
 
+              </div>
 
+            </div>
 
-
+          </div>
 
         </div>
-</div>
 
-    <!--=====================================
-    PIE DEL MODAL
-    ======================================-->
-    <div class="modal-footer">
-      <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
-      <button type="submit" class="btn btn-primary">Guardar clase</button>
-    </div>
+        <!--=====================================
+        PIE DEL MODAL
+        ======================================-->
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+
+          <button type="submit" class="btn btn-primary">Guardar Clase</button>
+
+        </div>
 
         <?php
-
-          $crearUsuario = new ControladorUsuarios();
-          $crearUsuario -> ctrCrearUsuario();
-
+/*
+          $crearClase = new ControladorClases();
+          $crearClase -> ctrCrearClase();
+*/
         ?>
 
       </form>
-    </div><!--modal-content-end-->
-  </div><!--modal-dialog-end--->
-</div><!--modal-end-->
 
+    </div>
 
+  </div>
 
-
-
-
-
-
+</div>
 
 <!--=====================================
 MODAL EDITAR USUARIO
