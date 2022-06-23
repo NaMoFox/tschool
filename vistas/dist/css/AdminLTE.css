@@ -4168,7 +4168,10 @@ table.text-center th {
         margin-top: 20px;
     }
 }
-
+.login-box-body,
+.register-box-body{
+border-radius: 10px;
+}
 .login-box-body,
 .register-box-body {
     background: #fff;
