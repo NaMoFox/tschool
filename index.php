@@ -24,3 +24,5 @@ require_once "modelos/asignaturas.modelo.php";
 
 $plantilla = new ControladorPlantilla();
 $plantilla -> ctrPlantilla();
+
+
