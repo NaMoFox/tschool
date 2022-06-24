@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./vistas/css/plantilla2.css">
     <link rel="stylesheet" href="./vistas/css/cards.css">
+    <link rel="icon" href="vistas/img/plantilla/icono-azul.png">
     <title>TecnoSchool</title>
 </head>
 <body>
