@@ -9,4 +9,10 @@ class ControladorPlantilla{
 	}	
 
 
+	public function ctrPlantilla2(){
+
+		include "vistas/plantilla2.php";
+
+	}
+
 }

@@ -39,7 +39,10 @@ body {
     /* this adds the "card" effect */
     padding: 16px;
     text-align: center;
-    background-color: #f1f1f1;
+    width: auto;
+    background-color: snow;
+    height: 300px;
+    
 }
 
 
