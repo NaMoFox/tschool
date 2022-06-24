@@ -41,8 +41,9 @@ body {
     text-align: center;
     width: auto;
     background-color: snow;
-    height: 300px;
-    
+    min-height: 260px;
+    max-height: 260px;
+    border-radius: 10px;
 }
 
 
