@@ -1,16 +1,16 @@
 <?php
 
-class ControladorEstudiantes{
+class ControladorPadres{
 
 	/*=============================================
-	CREAR ESTUDIANTES
+	CREAR ADMINISTRADORES
 	=============================================*/
 
-	static public function ctrCrearEstudiante(){
+	static public function ctrCrearPadre(){
 
-		if(isset($_POST["nuevoEstudiante"])){
+		if(isset($_POST["nuevoPadre"])){
 
-			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoEstudiante"]) &&
+			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoPadre"]) &&
                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoApellidos"]) &&
                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevoTipodoc"]) &&
 			   preg_match('/^[0-9]+$/', $_POST["nuevoDocumentoId"]) &&
@@ -19,9 +19,9 @@ class ControladorEstudiantes{
 			   preg_match('/^[()\-0-9 ]+$/', $_POST["nuevoTelefono"]) && 
 			   preg_match('/^[#\.\-a-zA-Z0-9 ]+$/', $_POST["nuevaDireccion"])){
 
-			   	$tabla = "estudiantes";
+			   	$tabla = "padres";
 
-			   	$datos = array("nombres"=>$_POST["nuevoEstudiante"],
+			   	$datos = array("nombres"=>$_POST["nuevoPadre"],
                                "apellidos"=>$_POST["nuevoApellidos"],
                                "tipodoc"=>$_POST["nuevoTipodoc"],
 					           "documento"=>$_POST["nuevoDocumentoId"],
@@ -31,7 +31,7 @@ class ControladorEstudiantes{
 					           "direccion"=>$_POST["nuevaDireccion"],
 					           "fecha_nacimiento"=>$_POST["nuevaFechaNacimiento"]);
 
-			   	$respuesta = ModeloEstudiantes::mdlIngresarEstudiante($tabla, $datos);
+			   	$respuesta = ModeloPadres::mdlIngresarPadre($tabla, $datos);
 
 			   	if($respuesta == "ok"){
 
@@ -39,13 +39,13 @@ class ControladorEstudiantes{
 
 					swal({
 						  type: "success",
-						  title: "El estudiante ha sido guardado correctamente",
+						  title: "El padre ha sido guardado correctamente",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
 						  }).then(function(result){
 									if (result.value) {
 
-									window.location = "estudiantes";
+									window.location = "padres";
 
 									}
 								})
@@ -60,13 +60,13 @@ class ControladorEstudiantes{
 
 					swal({
 						  type: "error",
-						  title: "¡El estudiante no puede ir vacío o llevar caracteres especiales!",
+						  title: "¡El padre no puede ir vacío o llevar caracteres especiales!",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
 						  }).then(function(result){
 							if (result.value) {
 
-							window.location = "estudiantes";
+							window.location = "padres";
 
 							}
 						})
@@ -82,28 +82,28 @@ class ControladorEstudiantes{
 	}
 
 	/*=============================================
-	MOSTRAR ESTUDIANTES
+	MOSTRAR ADMINISTRADORES
 	=============================================*/
 
-	static public function ctrMostrarEstudiantes($item, $valor){
+	static public function ctrMostrarPadres($item, $valor){
 
-		$tabla = "estudiantes";
+		$tabla = "padres";
 
-		$respuesta = ModeloEstudiantes::mdlMostrarEstudiantes($tabla, $item, $valor);
+		$respuesta = ModeloPadres::mdlMostrarPadres($tabla, $item, $valor);
 
 		return $respuesta;
 
 	}
 
 	/*=============================================
-	EDITAR ESTUDIANTE
+	EDITAR ADMINISTRADORES
 	=============================================*/
 
-	static public function ctrEditarEstudiante(){
+	static public function ctrEditarPadre(){
 
-		if(isset($_POST["editarEstudiante"])){
+		if(isset($_POST["editarPadre"])){
 
-            if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarEstudiante"]) &&
+            if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarPadre"]) &&
                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarApellidos"]) &&
                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarTipodoc"]) &&
 			   preg_match('/^[0-9]+$/', $_POST["editarDocumentoId"]) &&
@@ -112,10 +112,10 @@ class ControladorEstudiantes{
 			   preg_match('/^[()\-0-9 ]+$/', $_POST["editarTelefono"]) && 
 			   preg_match('/^[#\.\-a-zA-Z0-9 ]+$/', $_POST["editarDireccion"])){
 
-			   	$tabla = "estudiantes";
+			   	$tabla = "padres";
 
-			   	$datos = array("id"=>$_POST["idEstudiante"],
-			   				   "nombres"=>$_POST["editarEstudiante"],
+			   	$datos = array("id"=>$_POST["idPadre"],
+			   				   "nombres"=>$_POST["editarPadre"],
                                "apellidos"=>$_POST["editarApellidos"],
                                "tipodoc"=>$_POST["editarTipodoc"],
 					           "documento"=>$_POST["editarDocumentoId"],
@@ -125,7 +125,7 @@ class ControladorEstudiantes{
 					           "direccion"=>$_POST["editarDireccion"],
 					           "fecha_nacimiento"=>$_POST["editarFechaNacimiento"]);
 
-			   	$respuesta = ModeloEstudiantes::mdlEditarEstudiante($tabla, $datos);
+			   	$respuesta = ModeloPadres::mdlEditarPadre($tabla, $datos);
 
 			   	if($respuesta == "ok"){
 
@@ -133,13 +133,13 @@ class ControladorEstudiantes{
 
 					swal({
 						  type: "success",
-						  title: "El estudiante ha sido cambiado correctamente",
+						  title: "El padre ha sido cambiado correctamente",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
 						  }).then(function(result){
 									if (result.value) {
 
-									window.location = "estudiantes";
+									window.location = "padres";
 
 									}
 								})
@@ -154,13 +154,13 @@ class ControladorEstudiantes{
 
 					swal({
 						  type: "error",
-						  title: "¡El estudiante no puede ir vacío o llevar caracteres especiales!",
+						  title: "¡El padre no puede ir vacío o llevar caracteres especiales!",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"
 						  }).then(function(result){
 							if (result.value) {
 
-							window.location = "estudiantes";
+							window.location = "padres";
 
 							}
 						})
@@ -176,17 +176,17 @@ class ControladorEstudiantes{
 	}
 
 	/*=============================================
-	ELIMINAR ESTUDIANTE
+	ELIMINAR ADMINISTRADOR
 	=============================================*/
 
-	static public function ctrEliminarEstudiante(){
+	static public function ctrEliminarPadre(){
 
-		if(isset($_GET["idEstudiante"])){
+		if(isset($_GET["idPadre"])){
 
-			$tabla ="estudiantes";
-			$datos = $_GET["idEstudiante"];
+			$tabla ="padres";
+			$datos = $_GET["idPadre"];
 
-			$respuesta = ModeloEstudiantes::mdlEliminarEstudiante($tabla, $datos);
+			$respuesta = ModeloPadres::mdlEliminarPadre($tabla, $datos);
 
 			if($respuesta == "ok"){
 
@@ -194,14 +194,14 @@ class ControladorEstudiantes{
 
 				swal({
 					  type: "success",
-					  title: "El estudiantes ha sido borrado correctamente",
+					  title: "El padres ha sido borrado correctamente",
 					  showConfirmButton: true,
 					  confirmButtonText: "Cerrar",
 					  closeOnConfirm: false
 					  }).then(function(result){
 								if (result.value) {
 
-								window.location = "estudiantes";
+								window.location = "padres";
 
 								}
 							})

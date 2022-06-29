@@ -83,6 +83,51 @@
 
 		}
 
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Administrador"){
+
+			echo '<li>
+
+				<a href="administradores">
+				
+					<i class="fa fa-user-times"></i>
+					<span>Administrador</span>
+
+				</a>
+
+			</li>';
+
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Docente"){
+
+			echo '<li>
+
+				<a href="docentes">
+
+					<i class="fa fa-address-book-o"></i>
+					<span>Docentes</span>
+
+				</a>
+
+			</li>';
+
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Padres"){
+
+			echo '<li>
+
+				<a href="padres">
+
+					<i class="fa fa-male"></i>
+					<span>Padres</span>
+
+				</a>
+
+			</li>';
+
+		}
+
 		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Estudiante"){
 
 		echo '<li class="treeview">

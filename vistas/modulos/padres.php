@@ -20,7 +20,7 @@ if($_SESSION["perfil"] == "Especial"){
     
     <h1>
       
-      Administrar estudiantes
+      Administrar padres
     
     </h1>
 
@@ -28,7 +28,7 @@ if($_SESSION["perfil"] == "Especial"){
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Administrar estudiantes</li>
+      <li class="active">Administrar padres</li>
     
     </ol>
 
@@ -40,9 +40,9 @@ if($_SESSION["perfil"] == "Especial"){
 
       <div class="box-header with-border">
   
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarEstudiante">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarPadre">
           
-          Agregar estudiante
+          Agregar padres
 
         </button>
 
@@ -80,11 +80,11 @@ if($_SESSION["perfil"] == "Especial"){
           $item = null;
           $valor = null;
 
-          $estudiantes = ControladorEstudiantes::ctrMostrarEstudiantes($item, $valor);
+          $padres = ControladorPadrees::ctrMostrarPadrees($item, $valor);
+          
+          foreach ($padres as $key => $value) {
 
-          foreach ($estudiantes as $key => $value) {
-            
-
+                        
             echo '<tr>
 
                     <td>'.($key+1).'</td>
@@ -113,11 +113,11 @@ if($_SESSION["perfil"] == "Especial"){
 
                       <div class="btn-group">
                           
-                        <button class="btn btn-warning btnEditarEstudiante" data-toggle="modal" data-target="#modalEditarEstudiante" idEstudiante="'.$value["id"].'"><i class="fa fa-pencil"></i></button>';
+                        <button class="btn btn-warning btnEditarPadre" data-toggle="modal" data-target="#modalEditarPadre" idPadre="'.$value["id"].'"><i class="fa fa-pencil"></i></button>';
 
-                      if($_SESSION["perfil"] == "Administrador"){
+                      if($_SESSION["perfil"] == "Padre"){
 
-                          echo '<button class="btn btn-danger btnEliminarEstudiante" idEstudiante="'.$value["id"].'"><i class="fa fa-times"></i></button>';
+                          echo '<button class="btn btn-danger btnEliminarPadre" idPadre="'.$value["id"].'"><i class="fa fa-times"></i></button>';
 
                       }
 
@@ -144,10 +144,10 @@ if($_SESSION["perfil"] == "Especial"){
 </div>
 
 <!--=====================================
-MODAL AGREGAR ESTUDIANTES
+MODAL AGREGAR ADMINISTRADOR
 ======================================-->
 
-<div id="modalAgregarEstudiante" class="modal fade" role="dialog">
+<div id="modalAgregarPadre" class="modal fade" role="dialog">
   
   <div class="modal-dialog">
 
@@ -163,7 +163,7 @@ MODAL AGREGAR ESTUDIANTES
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-          <h4 class="modal-title">Agregar estudiante</h4>
+          <h4 class="modal-title">Agregar Padres</h4>
 
         </div>
 
@@ -183,7 +183,7 @@ MODAL AGREGAR ESTUDIANTES
               
                 <span class="input-group-addon"><i class="fa fa-user"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoEstudiante" placeholder="Ingresar nombres" required>
+                <input type="text" class="form-control input-lg" name="nuevoPadre" placeholder="Ingresar nombres" required>
 
               </div>
 
@@ -323,7 +323,7 @@ MODAL AGREGAR ESTUDIANTES
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar estudiante</button>
+          <button type="submit" class="btn btn-primary">Guardar padre</button>
 
         </div>
 
@@ -331,8 +331,8 @@ MODAL AGREGAR ESTUDIANTES
 
       <?php
 
-        $crearEstudiante = new ControladorEstudiantes();
-        $crearEstudiante -> ctrCrearEstudiante();
+        $crearPadre = new ControladorPadrees();
+        $crearPadre -> ctrCrearPadre();
 
       ?>
 
@@ -343,10 +343,10 @@ MODAL AGREGAR ESTUDIANTES
 </div>
 
 <!--=====================================
-MODAL EDITAR ESTUDIANTE
+MODAL EDITAR ADMINISTRADOR
 ======================================-->
 
-<div id="modalEditarEstudiante" class="modal fade" role="dialog">
+<div id="modalEditarPadre" class="modal fade" role="dialog">
   
   <div class="modal-dialog">
 
@@ -362,7 +362,7 @@ MODAL EDITAR ESTUDIANTE
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-          <h4 class="modal-title">Editar estudiante</h4>
+          <h4 class="modal-title">Editar padre</h4>
 
         </div>
 
@@ -382,8 +382,8 @@ MODAL EDITAR ESTUDIANTE
               
                 <span class="input-group-addon"><i class="fa fa-user"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="editarEstudiante" id="editarEstudiante" required>
-                <input type="hidden" id="idEstudiante" name="idEstudiante">
+                <input type="text" class="form-control input-lg" name="editarPadre" id="editarPadre" required>
+                <input type="hidden" id="idPadre" name="idPadre">
               </div>
 
             </div>
@@ -518,8 +518,8 @@ MODAL EDITAR ESTUDIANTE
 
       <?php
 
-        $editarEstudiante = new ControladorEstudiantes();
-        $editarEstudiante -> ctrEditarEstudiante();
+        $editarPadre = new ControladorPadrees();
+        $editarPadre -> ctrEditarPadre();
 
       ?>
 
@@ -533,8 +533,8 @@ MODAL EDITAR ESTUDIANTE
 
 <?php
 
-  $eliminarEstudiante = new ControladorEstudiantes();
-  $eliminarEstudiante -> ctrEliminarEstudiante();
+  $eliminarPadre = new ControladorPadrees();
+  $eliminarPadre -> ctrEliminarPadre();
 
 ?>
 

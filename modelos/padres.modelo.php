@@ -2,13 +2,13 @@
 
 require_once "conexion.php";
 
-class ModeloEstudiantes{
+class ModeloPadrees{
 
 	/*=============================================
-	CREAR ESTUDIANTES
+	CREAR PADRES
 	=============================================*/
 
-	static public function mdlIngresarEstudiante($tabla, $datos){
+	static public function mdlIngresarPadre($tabla, $datos){
 
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombres, apellidos, tipodoc, documento, codigo, email, telefono, direccion, fecha_nacimiento) VALUES (:nombres, :apellidos, :tipodoc, :documento, :codigo, :email, :telefono, :direccion, :fecha_nacimiento)");
 
@@ -38,10 +38,10 @@ class ModeloEstudiantes{
 	}
 
 	/*=============================================
-	MOSTRAR ESTUDIANTES
+	MOSTRAR PADRES
 	=============================================*/
 
-	static public function mdlMostrarEstudiantes($tabla, $item, $valor){
+	static public function mdlMostrarPadrees($tabla, $item, $valor){
 
 		if($item != null){
 
@@ -70,10 +70,10 @@ class ModeloEstudiantes{
 	}
 
 	/*=============================================
-	EDITAR ESTUDIANTES
+	EDITAR PADRES
 	=============================================*/
 
-	static public function mdlEditarEstudiante($tabla, $datos){
+	static public function mdlEditarPadre($tabla, $datos){
 
 		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombres = :nombres, apellidos = :apellidos, tipodoc = :tipodoc, documento = :documento, codigo = :codigo, email = :email, telefono = :telefono, direccion = :direccion, fecha_nacimiento = :fecha_nacimiento WHERE id = :id");
 
@@ -104,10 +104,10 @@ class ModeloEstudiantes{
 	}
 
 	/*=============================================
-	ELIMINAR ESTUDIANTE
+	ELIMINAR PADRES
 	=============================================*/
 
-	static public function mdlEliminarEstudiante($tabla, $datos){
+	static public function mdlEliminarPadre($tabla, $datos){
 
 		$stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id = :id");
 
@@ -130,10 +130,10 @@ class ModeloEstudiantes{
 	}
 
 	/*=============================================
-	ACTUALIZAR ESTUDIANTE
+	ACTUALIZAR PADRES
 	=============================================*/
 
-	static public function mdlActualizarEstudiante($tabla, $item1, $valor1, $valor){
+	static public function mdlActualizarPadre($tabla, $item1, $valor1, $valor){
 
 		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET $item1 = :$item1 WHERE id = :id");
 

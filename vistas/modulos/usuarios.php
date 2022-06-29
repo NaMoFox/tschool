@@ -214,6 +214,8 @@ MODAL AGREGAR USUARIO
 
                   <option value="Estudiante">Estudiante</option>
 
+                  <option value="Padre de Familia">Padre</option>
+
                 </select>
 
               </div>

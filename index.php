@@ -14,12 +14,18 @@ require_once "controladores/cursos.controlador.php";
 require_once "controladores/clases.controlador.php";
 require_once "controladores/asignaturas.controlador.php";
 require_once "controladores/estudiantes.controlador.php";
+require_once "controladores/administradores.controlador.php";
+require_once "controladores/docentes.controlador.php";
+require_once "controladores/padres.controlador.php";
 
 require_once "modelos/usuarios.modelo.php";
 require_once "modelos/cursos.modelo.php";
 require_once "modelos/clases.modelo.php";
 require_once "modelos/estudiantes.modelo.php";
 require_once "modelos/asignaturas.modelo.php";
+require_once "modelos/administradores.modelo.php";
+require_once "modelos/docentes.modelo.php";
+require_once "modelos/padres.modelo.php";
 
 
 $plantilla = new ControladorPlantilla();
