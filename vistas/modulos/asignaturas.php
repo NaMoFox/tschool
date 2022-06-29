@@ -17,7 +17,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
+          <h3 class="box-title">Todas las asignaturas</h3>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -28,13 +28,58 @@
           </div>
         </div>
         <div class="box-body">
-          Start creating your amazing application!
-        </div>
-        <!-- /.box-body -->
-        <div class="box-footer">
-          Footer
-        </div>
-        <!-- /.box-footer-->
+        <table class="">
+          <thead>
+            <tr>
+              <th style="padding:5%;">Asignaturas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:5%;">Ciencias</td>
+              <td style="padding:5%;">Fisica</td>
+              <td style="padding:5%;">Biología</td>
+            </tr>
+
+            <tr>
+              <td style="padding:5%;">Matematicas</td>
+              <td style="padding:5%;">Quimica</td>
+              <td style="padding:5%;">Ecología</td>
+            </tr>
+
+            <tr>
+              <td style="padding:5%;">Ciencias sociales</td>
+              <td style="padding:5%;">Geografia</td>
+              <td style="padding:5%;">Economía</td>
+            </tr>
+
+            <tr>
+              <td style="padding:5%;">Arte</td>
+              <td style="padding:5%;">Filosofía</td>
+              <td style="padding:5%;">Historia</td>
+            </tr>
+
+            <tr>
+              <td style="padding:5%;">Ética y valores</td>
+              <td style="padding:5%;">Literatura</td>
+              <td style="padding:5%;">Español</td>
+            </tr>
+
+            <tr>
+              <td style="padding:5%;">Ingles</td>
+              <td style="padding:5%;">Informatica</td>
+              <td style="padding:5%;">Relogion</td>
+            </tr>
+
+
+          </tbody>
+        </table>
+        
+
+
+
+
+
       </div>
       <!-- /.box -->
 

@@ -1,0 +1,37 @@
+body {
+    background-color: whitesmoke;
+}
+
+.volver {
+    padding: 8px;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    border-radius: 6px;
+}
+
+.volver:hover {
+    color: white;
+}
+
+.card-img-top {
+    padding: 10%;
+    height: 400px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-login {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-login:hover {
+    padding: 6px;
+    background-color: white;
+    color: blue;
+    border-radius: 6px;
+}

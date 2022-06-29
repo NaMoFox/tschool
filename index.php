@@ -30,3 +30,5 @@ require_once "modelos/padres.modelo.php";
 
 $plantilla = new ControladorPlantilla();
 $plantilla -> ctrPlantilla();
+
+
