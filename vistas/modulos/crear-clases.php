@@ -41,8 +41,9 @@
          <tr>
            
            <th style="width:10px">#</th>
+           <th>Codigo de asignatura</th>
            <th>Clase</th>
-           <th>Duracion</th>
+           <th>Duracion Horas</th>
            <th>Horario</th>
            <th>Docente</th>
            <th>Estado</th>
@@ -63,11 +64,12 @@
        foreach ($clases as $key => $value){
          
           echo '<tr>
-                  <td>1</td>
+                  <td>'.$value["id"].'</td>
+                  <td>'.$value["codigo_asignatura"].'</td>
                   <td>'.$value["nombre_clase"].'</td>
                   <td>'.$value["duracion"].'</td>
                   <td>'.$value["horario"].'</td>
-                  <td>'.$value["docente"].'</td>';
+                  <td>'.$value["nombre_docente"].'</td>';
 
                   if($value["estado"] != 0){
 
@@ -131,7 +133,23 @@ MODAL AGREGAR USUARIO
 
           <div class="box-body">
 
-            <!-- ENTRADA PARA NUEVA CLASE -->
+            <!-- ENTRADA PARA NUEVO CODIGO  -->
+            
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-user"></i></span> 
+                <h5>Codigo de la clase</h5>
+                <input type="text" class="form-control input-lg" name="nuevoCodigo" placeholder="1122" required>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- ENTRADA PARA NUEVO NOMBRE  -->
             
             <div class="form-group">
               
@@ -139,7 +157,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon"><i class="fa fa-user"></i></span> 
                 <h5>Nombre de la clase</h5>
-                <input type="text" class="form-control input-lg" name="nuevaClase" placeholder="Nueva clase" required>
+                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Quimica:" required>
 
               </div>
 
@@ -187,19 +205,8 @@ MODAL AGREGAR USUARIO
 
             </div>
 
-            <!-- ENTRADA PARA ESTADO-->
-
-            <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
-                <h5>Estado</h5>
-                <input type="text" class="form-control input-lg" name="nuevoEstado" placeholder="Ej: 1 ó 0" required>
-
-              </div>
-
-            </div>
+            
+            
 
           </div>
 
@@ -218,10 +225,10 @@ MODAL AGREGAR USUARIO
         </div>
 
         <?php
-/*
+
           $crearClase = new ControladorClases();
           $crearClase -> ctrCrearClase();
-*/
+
         ?>
 
       </form>
@@ -231,6 +238,11 @@ MODAL AGREGAR USUARIO
   </div>
 
 </div>
+
+
+
+
+
 
 <!--=====================================
 MODAL EDITAR USUARIO

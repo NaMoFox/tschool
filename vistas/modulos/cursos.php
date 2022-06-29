@@ -1,3 +1,4 @@
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -17,7 +18,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
+          <h3 class="box-title">Cursos</h3>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -28,15 +29,168 @@
           </div>
         </div>
         <div class="box-body">
-          Start creating your amazing application!
+          
+        <div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #B9DBE3;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 601</h5>
+        <p class="card-text">Lun-Mier-Vie / 6AM-12PM.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #B9DBE3;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 602</h5>
+        <p class="card-text">Mart-Jue-Sab / 6AM-12PM.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #E5F3F6;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 701</h5>
+        <p class="card-text">Lun-Mier-Vie / 6AM-10AM.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #E5F3F6;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 702</h5>
+        <p class="card-text">Mart-Jue-Sab / 6AM-10AM.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #B9DBE3;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 801</h5>
+        <p class="card-text">Mart-Jue-Sab / 6AM-12PM.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #B9DBE3;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 802</h5>
+        <p class="card-text">Lun-Mier-Vie / 6AM-12PM.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #E5F3F6;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 901</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #E5F3F6;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 902</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #B9DBE3;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 1001</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #B9DBE3;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 1002</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #E5F3F6;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 1101</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #E5F3F6;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 1102</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #B9DBE3;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 1103</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="background-color: #B9DBE3;padding:5%;">
+      <div class="card-body">
+        <h5 class="card-title">Curso 1104</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Administrar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
         </div>
         <!-- /.box-body -->
-        <div class="box-footer">
-          Footer
-        </div>
-        <!-- /.box-footer-->
-      </div>
-      <!-- /.box -->
+        
 
     </section>
     <!-- /.content -->
