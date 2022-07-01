@@ -1,0 +1,46 @@
+body {
+    background-color: whitesmoke;
+}
+
+.btn-login {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-login:hover {
+    padding: 6px;
+    background-color: white;
+    color: blue;
+    border-radius: 6px;
+}
+
+.card-group {
+    padding: 20px;
+    background-color: rgb(40, 200, 221);
+    box-shadow: 0px 5px 5px black;
+}
+
+.card {
+    text-align: center;
+    align-items: center;
+}
+
+.btn-g {
+    padding: 14px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 187, 9);
+    border-radius: 10px;
+}
+
+.btn-g:hover {
+    color: white;
+}
+
+#carouselExampleCaptions {
+    box-shadow: 0px 5px 5px black;
+}
+
+.cc {
+    box-shadow: 0px 5px 5px black;
+}
